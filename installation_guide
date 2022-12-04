@@ -1,0 +1,11 @@
+Ubuntu 22.04
+ROS2 Humble - eProsima’s Fast DDS
+ROS2 Control
+Gazebo 11
+--------------------------------
+source /opt/ros/humble/setup.bash
+
+ros2 run demo_nodes_cpp talker
+
+ros2 run demo_nodes_py listener
+
