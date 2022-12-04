@@ -21,7 +21,9 @@ RUN echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/r
 RUN apt-get update && apt-get upgrade -y && apt-get install -y \
 ros-humble-desktop ros-dev-tools \
 ros-humble-gazebo-ros-pkgs \
-ros-humble-xacro ros-humble-joint-state-publisher-gui
+ros-humble-xacro ros-humble-joint-state-publisher-gui \
+ros-humble-gazebo-ros2-control ros-humble-ros2-control \
+ros-humble-ros2-controllers
 
 RUN useradd -ms /bin/bash ros-user && passwd -d ros-user && usermod -aG sudo ros-user
 
