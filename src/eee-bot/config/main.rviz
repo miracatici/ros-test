@@ -4,6 +4,7 @@ Panels:
     Name: Displays
     Property Tree Widget:
       Expanded:
+        - /TF1
         - /LaserScan1
         - /Camera1/Visibility1
       Splitter Ratio: 0.5
@@ -68,7 +69,7 @@ Visualization Manager:
       Marker Scale: 1
       Name: TF
       Show Arrows: true
-      Show Axes: true
+      Show Axes: false
       Show Names: false
       Tree:
         odom:
@@ -172,9 +173,9 @@ Visualization Manager:
       Name: LaserScan
       Position Transformer: XYZ
       Selectable: true
-      Size (Pixels): 3
+      Size (Pixels): 5
       Size (m): 0.05000000074505806
-      Style: Flat Squares
+      Style: Spheres
       Topic:
         Depth: 5
         Durability Policy: Volatile
@@ -258,18 +259,18 @@ Visualization Manager:
         Swap Stereo Eyes: false
         Value: false
       Focal Point:
-        X: -0.3314138948917389
-        Y: -0.34131091833114624
-        Z: 0.5949068665504456
+        X: 0.3562179207801819
+        Y: -0.1163378655910492
+        Z: 1.0177925825119019
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false
       Name: Current View
       Near Clip Distance: 0.009999999776482582
-      Pitch: 0.9097967147827148
+      Pitch: 0.5697967410087585
       Target Frame: <Fixed Frame>
       Value: Orbit (rviz)
-      Yaw: 4.623581409454346
+      Yaw: 4.868581295013428
     Saved: ~
 Window Geometry:
   Camera:
