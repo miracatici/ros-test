@@ -1,11 +1,31 @@
-Ubuntu 22.04
-ROS2 Humble - eProsima’s Fast DDS
-ROS2 Control
-Gazebo 11
---------------------------------
-source /opt/ros/humble/setup.bash
+# Requirements 
 
-ros2 run demo_nodes_cpp talker
+# Ubuntu 22.04 (Jammy)
+# ROS2 Humble
+# Gazebo 11 (Included with installation)
+# Various control package
 
-ros2 run demo_nodes_py listener
+export LANG="en_US.UTF-8"
 
+sudo apt-get update && sudo apt-get install locales -y
+sudo locale-gen en_US en_US.UTF-8
+sudo update-locale LC_ALL=en_US.UTF-8 LANG=en_US.UTF-8
+
+sudo apt-get install curl software-properties-common -y
+sudo add-apt-repository universe
+
+sudo curl -sSL https://raw.githubusercontent.com/ros/rosdistro/master/ros.key -o /usr/share/keyrings/ros-archive-keyring.gpg
+
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/ros-archive-keyring.gpg] http://packages.ros.org/ros2/ubuntu $(. /etc/os-release && echo $UBUNTU_CODENAME) main" | sudo tee /etc/apt/sources.list.d/ros2.list > /dev/null
+
+sudo apt-get update
+sudo apt-get upgrade -y
+sudo apt-get install -y ros-humble-desktop ros-dev-tools \
+ros-humble-gazebo-ros-pkgs \
+ros-humble-xacro ros-humble-joint-state-publisher-gui \
+ros-humble-gazebo-ros2-control ros-humble-ros2-control \
+ros-humble-ros2-controllers
+
+echo 'source /opt/ros/humble/setup.bash' >> ~/.bashrc
+
+source ~/.bashrc
