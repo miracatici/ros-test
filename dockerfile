@@ -25,6 +25,8 @@ ros-humble-xacro ros-humble-joint-state-publisher-gui \
 ros-humble-gazebo-ros2-control ros-humble-ros2-control \
 ros-humble-ros2-controllers
 
+RUN apt install xfce4 xfce4-goodies -y && apt install tightvncserver -y
+
 RUN useradd -ms /bin/bash ros-user && passwd -d ros-user && usermod -aG sudo ros-user
 
 USER ros-user
