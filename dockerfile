@@ -23,7 +23,7 @@ ros-humble-desktop ros-dev-tools \
 ros-humble-gazebo-ros-pkgs \
 ros-humble-xacro ros-humble-joint-state-publisher-gui \
 ros-humble-gazebo-ros2-control ros-humble-ros2-control \
-ros-humble-ros2-controllers xfce4 xfce4-goodies tightvncserver python3-pip
+ros-humble-ros2-controllers python3-pip
 
 COPY ./requirements.txt /tmp/requirements.txt
 
