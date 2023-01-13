@@ -23,9 +23,13 @@ ros-humble-desktop ros-dev-tools \
 ros-humble-gazebo-ros-pkgs \
 ros-humble-xacro ros-humble-joint-state-publisher-gui \
 ros-humble-gazebo-ros2-control ros-humble-ros2-control \
-ros-humble-ros2-controllers
+ros-humble-ros2-controllers xfce4 xfce4-goodies tightvncserver python3-pip
 
-RUN apt install xfce4 xfce4-goodies -y && apt install tightvncserver -y
+COPY ./requirements.txt /tmp/requirements.txt
+
+RUN python3 -m pip install --upgrade pip
+
+RUN python3 -m pip install -r /tmp/requirements.txt
 
 RUN useradd -ms /bin/bash ros-user && passwd -d ros-user && usermod -aG sudo ros-user
 
